@@ -62,43 +62,16 @@ If these prerequisites are not met, **TPM2-based auto-unlock will not function**
 system will fall back to manual LUKS passphrase entry.
 
 ## Multilingual Keyboard Layout Considerations (Early Boot)
-On systems configured with **multiple keyboard layouts**, early boot environments
-(initramfs, LUKS prompt) may not reflect the desktop keymap.
-
-### Mitigation strategies
-
-- Use **ASCII-only LUKS passphrases**
-- Configure console keymaps explicitly if required
-- Keep at least one fallback unlock method
-- If a new kernel fails to unlock, **boot a previous known-working kernel**,
-  which uses its own initramfs and keymap
-
-On systems configured with **multiple keyboard layouts** (e.g. US + non-US layouts),
-it is important to understand that **early boot environments** (initramfs, LUKS prompt)
-do **not always reflect the desktop keyboard configuration**.
-
-In particular:
-
-- The **LUKS passphrase prompt** during early boot typically uses the **default keymap**
-  embedded in the initramfs
-- Graphical desktop layout switching (e.g. `Win + Space`) is **not available**
-- After installation or **after early kernel updates**, the active keymap may
-  temporarily revert to the default (commonly `us`)
-
-This can result in:
-- Passphrases appearing “incorrect” when typed
-- Unlock failures immediately after installation
-- Unlock failures after the first kernel or initramfs rebuild
-
+On systems configured with **multiple keyboard layouts** (e.g. US + non-US), early boot
+(initramfs, LUKS prompt) may not match the desktop keymap. The prompt uses the **default
+initramfs keymap**, layout switching is unavailable, and some updates can temporarily
+reset the keymap (often to `us`). This can cause “wrong” keystrokes and unlock failures.
 This behavior is expected and documented.[^5]
 
 ### Mitigation strategies
 
-- Prefer a **layout-agnostic passphrase** (ASCII-only) for LUKS
-- Explicitly configure the console keymap if relying on non-US layouts
-- Always retain at least one fallback unlock method (TPM2 or passphrase)
-- If a new kernel fails to unlock, **boot a previous known-working kernel**,
-  which uses its own initramfs and keymap
+- Use a **layout-agnostic passphrase** (ASCII-only) or configure the console keymap.
+- Keep a **fallback unlock method** and boot a previous known-working kernel if needed.
 
 For details and discussion, see Fedora’s official community guidance:
 [^6]
