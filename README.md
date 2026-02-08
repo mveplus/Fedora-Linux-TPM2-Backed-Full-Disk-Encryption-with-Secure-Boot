@@ -220,7 +220,7 @@ Version: 2
   https://www.freedesktop.org/software/systemd/man/systemd-cryptenroll.html
 
 - Fedora Documentation – UEFI Secure Boot  
-  https://docs.fedoraproject.org/en-US/quick-docs/uefi-secure-boot/
+  https://jfearn.fedorapeople.org/fdocs/en-US/Fedora_Draft_Documentation/0.1/html-single/UEFI_Secure_Boot_Guide/index.html
 
 - Fedora Discussion – Real-world TPM2 + LUKS setups  
   https://discussion.fedoraproject.org/
