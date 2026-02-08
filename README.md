@@ -139,7 +139,7 @@ sudo systemd-cryptenroll --wipe-slot=tpm2 /dev/nvme0n1pX
 
 ---
 
-## Verification Checklist (Sanitised Example Output)
+## Example and Verification Checklist: 
 
 The following example output demonstrates a **correctly configured system**.
 All identifiers are anonymised.
@@ -154,7 +154,7 @@ cat /etc/dracut.conf.d/tpm2.conf
 add_dracutmodules+=" tpm2-tss "
 ```
 
-If not you cna add it:
+If not, you can add it:
 
 ```bash
 echo 'add_dracutmodules+=" tpm2-tss "' > /etc/dracut.conf.d/tpm2.conf
