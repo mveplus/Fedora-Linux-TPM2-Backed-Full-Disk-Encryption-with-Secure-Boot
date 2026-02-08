@@ -146,6 +146,16 @@ All identifiers are anonymised.
 
 ### ✅ TPM2 support included in initramfs
 
+⚠️  Check first! on Fedora Linux 43 (Workstation Edition) that is default:
+
+```bash
+cat /etc/dracut.conf.d/tpm2.conf
+# expected output:
+add_dracutmodules+=" tpm2-tss "
+```
+
+If not you cna add it:
+
 ```bash
 echo 'add_dracutmodules+=" tpm2-tss "' > /etc/dracut.conf.d/tpm2.conf
 ```
