@@ -12,7 +12,7 @@ The design goal is simple:
 - 🧯 Retain a passphrase fallback for recovery and maintenance
 
 This setup uses **first-class Fedora tooling** (`systemd-cryptenroll`, `dracut`) — no
-third‑party hacks.
+third‑party hacks.[^3]
 
 ---
 
@@ -90,7 +90,7 @@ This can result in:
 - Unlock failures immediately after installation
 - Unlock failures after the first kernel or initramfs rebuild
 
-This behavior is expected and documented.
+This behavior is expected and documented.[^5]
 
 ### Mitigation strategies
 
@@ -129,7 +129,7 @@ This is expected and intentional behavior.
 
 - **PCR 7** is used
 
-Why PCR 7:
+Why PCR 7:[^4]
 
 - Reflects Secure Boot and kernel trust state
 - Stable across normal kernel updates
@@ -140,12 +140,12 @@ Why PCR 7:
 
 ## Implementation Summary
 
-### 1. Enroll TPM2 unlock key
+### 1. Enroll TPM2 unlock key[^1]
 ```bash
 sudo systemd-cryptenroll   --tpm2-device=auto   --tpm2-pcrs=7   /dev/nvme0n1pX
 ```
 
-### 2. Enable TPM2 unlocking in crypttab
+### 2. Enable TPM2 unlocking in crypttab[^2]
 ```text
 luks-<LUKS_UUID>  UUID=<LUKS_UUID>  none  discard,tpm2-device=auto
 ```
