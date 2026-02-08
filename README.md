@@ -208,6 +208,25 @@ Version: 2
 
 ---
 
+## Sources & References
+
+- Fedora Magazine – TPM2 auto-unlock with systemd  
+  https://fedoramagazine.org/use-systemd-cryptenroll-with-fido-u2f-or-tpm2-to-decrypt-your-disk/
+
+- Fedora Magazine – Automatically decrypt your disk using TPM2  
+  https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
+
+- systemd documentation – systemd-cryptenroll(1)  
+  https://www.freedesktop.org/software/systemd/man/systemd-cryptenroll.html
+
+- Fedora Documentation – UEFI Secure Boot  
+  https://docs.fedoraproject.org/en-US/quick-docs/uefi-secure-boot/
+
+- Fedora Discussion – Real-world TPM2 + LUKS setups  
+  https://discussion.fedoraproject.org/
+
+---
+
 ## License
 
 Documentation only.
