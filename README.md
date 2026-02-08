@@ -101,7 +101,7 @@ This behavior is expected and documented.
   which uses its own initramfs and keymap
 
 For details and discussion, see Fedora’s official community guidance:
-[6]
+[^6]
 
 ---
 
@@ -252,22 +252,22 @@ Version: 2
 
 ## Sources & References
 
-[1]: Fedora Magazine – TPM2 auto-unlock with systemd  
+[^1]: Fedora Magazine – TPM2 auto-unlock with systemd  
   https://fedoramagazine.org/use-systemd-cryptenroll-with-fido-u2f-or-tpm2-to-decrypt-your-disk/
 
-[2]: Fedora Magazine – Automatically decrypt your disk using TPM2  
+[^2]: Fedora Magazine – Automatically decrypt your disk using TPM2  
   https://fedoramagazine.org/automatically-decrypt-your-disk-using-tpm2/
 
-[3]: systemd documentation – systemd-cryptenroll(1)  
+[^3]: systemd documentation – systemd-cryptenroll(1)  
   https://www.freedesktop.org/software/systemd/man/systemd-cryptenroll.html
 
-[4]: Fedora Documentation – UEFI Secure Boot  
+[^4]: Fedora Documentation – UEFI Secure Boot  
   https://jfearn.fedorapeople.org/fdocs/en-US/Fedora_Draft_Documentation/0.1/html-single/UEFI_Secure_Boot_Guide/index.html
 
-[5]: Fedora Discussion – Real-world TPM2 + LUKS setups  
+[^5]: Fedora Discussion – Real-world TPM2 + LUKS setups  
   https://discussion.fedoraproject.org/
 
-[6]: Fedora Discussion – Keyboard layout issues at LUKS prompt  
+[^6]: Fedora Discussion – Keyboard layout issues at LUKS prompt  
 https://discussion.fedoraproject.org/t/how-to-change-layout-in-luks-passphrase/145687
 
 ---
